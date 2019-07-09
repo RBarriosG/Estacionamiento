@@ -19,7 +19,7 @@ public class ManejadorParqueo {
 	
 	public void ejecutarGuardado(ComandoParqueo comandoParqueo) {
 		this.servicioParqueo
-			.guardar(new Parqueo(comandoParqueo.getID(),
+			.guardar(new Parqueo(comandoParqueo.getId(),
 								comandoParqueo.getVehiculo(),
 								comandoParqueo.getFechaInicio(),
 								comandoParqueo.getFechaFin(),
@@ -27,7 +27,7 @@ public class ManejadorParqueo {
 	}
 	
 	public void ejecutarEliminacion(ComandoParqueo comandoParqueo) {
-		this.servicioParqueo.eliminar(comandoParqueo.getID());
+		this.servicioParqueo.eliminar(comandoParqueo.getId());
 	}
 
 }

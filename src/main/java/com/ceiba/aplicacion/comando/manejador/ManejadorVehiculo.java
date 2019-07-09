@@ -21,7 +21,7 @@ public class ManejadorVehiculo {
 	
 	public void ejecutarGuardado(ComandoVehiculo comandoVehiculo) {
 		this.servicioVehiculo
-			.guardar(new Vehiculo(comandoVehiculo.getid(),
+			.guardar(new Vehiculo(comandoVehiculo.getId(),
 									comandoVehiculo.getPlaca(),
 									comandoVehiculo.getTipo(),
 									comandoVehiculo.getCilindraje()));

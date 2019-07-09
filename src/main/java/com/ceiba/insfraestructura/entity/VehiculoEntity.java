@@ -6,7 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity(name = "Vehiculo")
+@NoArgsConstructor
+@Data
 public class VehiculoEntity {
 
 	@Id

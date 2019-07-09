@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.ceiba.dominio.servicio.ServicioVehiculo;
 import com.ceiba.insfraestructura.adaptador.repositorio.JpaRepositorioVehiculoImp;
 
-@Configuration
+// @Configuration
 public class BeanServicioVehiculo {
 
 	@Bean

@@ -10,8 +10,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Entity(name = "Parqueo")
+@NoArgsConstructor
+@Data
 public class ParqueoEntity {
 
 	@Id
@@ -31,8 +36,6 @@ public class ParqueoEntity {
 	@NotNull
 	private double valor;
 
-	public ParqueoEntity() {
-	}
 	
 	public ParqueoEntity(VehiculoEntity vehiculo, @NotNull Date fechaInicio, @NotNull Date fechaFin,
 			@NotNull double valor) {

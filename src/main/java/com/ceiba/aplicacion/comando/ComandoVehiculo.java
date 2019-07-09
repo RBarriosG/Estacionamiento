@@ -1,5 +1,12 @@
 package com.ceiba.aplicacion.comando;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ComandoVehiculo {
 
 	private Long id;
@@ -10,21 +17,6 @@ public class ComandoVehiculo {
 	
 	private int cilindraje;
 	
-	public Long getid() {
-		return id;
-	}
-	
-	public int getCilindraje() {
-		return cilindraje;
-	}
-	
-	public String getPlaca() {
-		return placa;
-	}
-	
-	public String getTipo() {
-		return tipo;
-	}
 	
 	
 }

@@ -14,8 +14,12 @@ import com.ceiba.insfraestructura.entity.ParqueoEntity;
 @Repository
 public class JpaRepositorioParqueoImp implements RepositorioParqueo{
 
-	@Autowired
 	JpaRepositorioParqueo jpaRepositortioParqueo;
+	
+	@Autowired
+	public JpaRepositorioParqueoImp(JpaRepositorioParqueo jpaRepositortioParqueo) {
+		this.jpaRepositortioParqueo = jpaRepositortioParqueo;
+	}
 	
 	@Override
 	public boolean existsById(Long id) {

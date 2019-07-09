@@ -4,6 +4,13 @@ import java.util.Date;
 
 import com.ceiba.dominio.modelo.Vehiculo;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ComandoParqueo {
 
 	private Long id;
@@ -16,24 +23,6 @@ public class ComandoParqueo {
 	
 	private Double valor;
 	
-	public Vehiculo getVehiculo() {
-		return vehiculo;
-	}
-
-	public Date getFechaInicio() {
-		return fechaInicio;
-	}
-
-	public Date getFechaFin() {
-		return fechaFin;
-	}
-
-	public Double getValor() {
-		return valor;
-	}
 	
-	public Long getID() {
-		return id;
-	}
 	
 }
