@@ -17,8 +17,10 @@ public class ServicioParqueo {
 	}
 	
 	public void guardar(Parqueo parqueo) {
-		if (!validadExistencia(parqueo)) 
+		if (!validadExistencia(parqueo)) { 
 			this.repositorioParqueo.save(parqueo);
+			return;
+		}
 		throw new ExcepcionDuplicidad(PARQUEO_YA_EXISTE);
 	}
 
