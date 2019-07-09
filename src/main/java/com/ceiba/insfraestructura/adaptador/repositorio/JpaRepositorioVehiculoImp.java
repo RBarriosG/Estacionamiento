@@ -12,12 +12,15 @@ import com.ceiba.insfraestructura.conversores.ConversorVehiculo;
 import com.ceiba.insfraestructura.entity.VehiculoEntity;
 
 @Repository
-public class JpaRepositorioVehiculoImp implements RepositorioVehiculo{
+public class JpaRepositorioVehiculoImp implements RepositorioVehiculo {
+
+	JpaRepositorioVehiculo jpaRepositorioVehiculo;
 
 	@Autowired
-	JpaRepositorioVehiculo jpaRepositorioVehiculo;
-	
-	
+	public JpaRepositorioVehiculoImp(JpaRepositorioVehiculo jpaRepositorioVehiculo) {
+		this.jpaRepositorioVehiculo = jpaRepositorioVehiculo;
+	}
+
 	@Override
 	public boolean existsByPlaca(String placa) {
 		return jpaRepositorioVehiculo.existsByPlaca(placa);
@@ -36,14 +39,14 @@ public class JpaRepositorioVehiculoImp implements RepositorioVehiculo{
 	@Override
 	public List<Vehiculo> findAll() {
 		List<Vehiculo> vehiculos = new ArrayList<>();
-		
+
 		List<VehiculoEntity> vehiculosEntities = this.jpaRepositorioVehiculo.findAll();
-		
+
 		for (int i = 0; i < vehiculosEntities.size(); i++) {
 			vehiculos.add(ConversorVehiculo.convertirAModelo(vehiculosEntities.get(i)));
 		}
-		
-		return vehiculos; 
+
+		return vehiculos;
 	}
 
 }

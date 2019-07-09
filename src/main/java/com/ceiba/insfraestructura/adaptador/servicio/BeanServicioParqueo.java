@@ -11,9 +11,8 @@ import com.ceiba.insfraestructura.adaptador.repositorio.JpaRepositorioParqueoImp
 public class BeanServicioParqueo {
 
 	@Bean
-	public ServicioParqueo servicioParqueo() {
-		JpaRepositorioParqueo jpaRepo  = null;
-		return new ServicioParqueo(new JpaRepositorioParqueoImp(jpaRepo));
+	public ServicioParqueo servicioParqueo(JpaRepositorioParqueo jpaRepositortioParqueo) {
+		return new ServicioParqueo(new JpaRepositorioParqueoImp(jpaRepositortioParqueo));
 	}
 	
 }

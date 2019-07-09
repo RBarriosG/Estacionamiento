@@ -9,12 +9,8 @@ public class Vehiculo {
 	private String tipo;
 	
 	private int cilindraje;
-	
-	public Vehiculo() {
-	}
 
 	public Vehiculo(Long id, String placa, String tipo, int cilindraje) {
-		super();
 		this.id = id;
 		this.placa = placa;
 		this.tipo = tipo;
