@@ -19,8 +19,7 @@ public class ManejadorCrearVehiculo {
 	
 	public void ejecutar(ComandoVehiculo comandoVehiculo) {
 		this.servicioVehiculo
-			.ejecutar(new Vehiculo(comandoVehiculo.getId(),
-									comandoVehiculo.getPlaca(),
+			.ejecutar(new Vehiculo(comandoVehiculo.getPlaca(),
 									comandoVehiculo.getTipo(),
 									comandoVehiculo.getCilindraje()));
 	}

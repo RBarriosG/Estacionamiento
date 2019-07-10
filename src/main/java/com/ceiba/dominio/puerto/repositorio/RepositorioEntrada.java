@@ -2,16 +2,16 @@ package com.ceiba.dominio.puerto.repositorio;
 
 import java.util.List;
 
-import com.ceiba.dominio.modelo.Parqueo;
+import com.ceiba.dominio.modelo.Entrada;
 
-public interface RepositorioParqueo {
+public interface RepositorioEntrada {
 
 	boolean existsById(Long id);
 	
 	void deleteById(Long id);
 	
-	void save(Parqueo parqueo);
+	void save(Entrada entrada);
 	
-	List<Parqueo> findAll();
+	List<Entrada> findAll();
 	
 }

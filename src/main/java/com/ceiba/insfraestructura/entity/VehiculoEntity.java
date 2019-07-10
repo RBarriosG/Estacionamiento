@@ -18,14 +18,11 @@ public class VehiculoEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	
-	@NotNull
 	private String placa;
-	
+
 	@NotNull
 	private String tipo;
-	
+
 	@NotNull
 	private int cilindraje;
 
@@ -35,6 +32,5 @@ public class VehiculoEntity {
 		this.tipo = tipo;
 		this.cilindraje = cilindraje;
 	}
-	
-	
+
 }

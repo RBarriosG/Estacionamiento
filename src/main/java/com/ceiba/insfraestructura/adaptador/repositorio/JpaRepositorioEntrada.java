@@ -3,9 +3,9 @@ package com.ceiba.insfraestructura.adaptador.repositorio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ceiba.insfraestructura.entity.ParqueoEntity;
+import com.ceiba.insfraestructura.entity.EntradaEntity;
 
 @Repository
-public interface JpaRepositorioParqueo extends JpaRepository<ParqueoEntity, Long>{
+public interface JpaRepositorioEntrada extends JpaRepository<EntradaEntity, Long>{
 
 }

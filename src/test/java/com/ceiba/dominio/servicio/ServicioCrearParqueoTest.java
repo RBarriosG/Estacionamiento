@@ -4,14 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.ceiba.dominio.modelo.Parqueo;
+import com.ceiba.dominio.modelo.Entrada;
 
 public class ServicioCrearParqueoTest {
 
 	@Test
 	public void validarExistenciaParqueoTest() {
 		//arrange
-		Parqueo parqueo;
+		Entrada parqueo;
 	}
 
 }

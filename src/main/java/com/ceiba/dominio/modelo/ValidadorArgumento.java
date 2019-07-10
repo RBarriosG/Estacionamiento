@@ -12,21 +12,23 @@ public final class ValidadorArgumento {
 	}
 	
 	public static void validarObligatorio(Object valor, String mensaje) {
-		if (valor == null) {
+		if (valor == null)
 			throw new ExcepcionValorObligatorio(mensaje);
-		}
 	}
 	
-	public static void validarObligatorioCilindraje(int cilindraje, String mensaje) {
-		if (cilindraje == 0) {
+	public static void validarObligatorioCilindrajeSiEsMoto(int cilindraje, String tipo, String mensaje) {
+		if (cilindraje == 0 && tipo.equals(MOTO)) 
 			throw new ExcepcionValorObligatorio(mensaje);
-		}
 	}
 	
 	public static void validarTipoVehiculo(Object valor, String mensaje) {
-		if (!(valor.toString().equals(CARRO) || valor.toString().equals(MOTO))) {
+		if (!(valor.toString().equals(CARRO) || valor.toString().equals(MOTO)))
 			throw new ExcepcionTipoCarro(mensaje);
-		}
+	}
+	
+	public static void validarObligatorioValor(double valor, String mensaje) {
+		if(valor == 0.0)
+			throw new ExcepcionValorObligatorio(mensaje);
 	}
 	
 }

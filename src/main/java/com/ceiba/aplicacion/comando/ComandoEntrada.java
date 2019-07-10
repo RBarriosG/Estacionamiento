@@ -11,18 +11,12 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ComandoParqueo {
+public class ComandoEntrada {
 
 	private Long id;
-	
+
 	private Vehiculo vehiculo;
-	
-	private Date fechaInicio;
-	
-	private Date fechaFin;
-	
-	private Double valor;
-	
-	
-	
+
+	private Date fechaEntrada;
+
 }

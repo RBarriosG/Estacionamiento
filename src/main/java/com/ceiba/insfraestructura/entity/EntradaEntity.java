@@ -15,35 +15,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
-@Entity(name = "Parqueo")
+@Entity(name = "Entrada")
 @NoArgsConstructor
 @Data
-public class ParqueoEntity {
+public class EntradaEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "placa", referencedColumnName = "placa")
 	private VehiculoEntity vehiculo;
-	
-	@NotNull
-	private Date fechaInicio;
-	
-	@NotNull
-	private Date fechaFin;
-	
-	@NotNull
-	private double valor;
 
-	
-	public ParqueoEntity(VehiculoEntity vehiculo, @NotNull Date fechaInicio, @NotNull Date fechaFin,
-			@NotNull double valor) {
+	@NotNull
+	private Date fechaEntrada;
+
+	public EntradaEntity(VehiculoEntity vehiculo, @NotNull Date fechaEntrada) {
 		super();
 		this.vehiculo = vehiculo;
-		this.fechaInicio = fechaInicio;
-		this.fechaFin = fechaFin;
-		this.valor = valor;
+		this.fechaEntrada = fechaEntrada;
 	}
 }

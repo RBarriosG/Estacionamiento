@@ -3,20 +3,20 @@ package com.ceiba.dominio.servicio;
 import java.util.List;
 
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.dominio.modelo.Parqueo;
-import com.ceiba.dominio.puerto.repositorio.RepositorioParqueo;
+import com.ceiba.dominio.modelo.Entrada;
+import com.ceiba.dominio.puerto.repositorio.RepositorioEntrada;
 
-public class ServicioCrearParqueo {
+public class ServicioCrearEntrada {
 
 	private static final String PARQUEO_YA_EXISTE = "Parqueo ya existe";
 	
-	private RepositorioParqueo repositorioParqueo;
+	private RepositorioEntrada repositorioParqueo;
 	
-	public ServicioCrearParqueo(RepositorioParqueo repositorioParqueo) {
+	public ServicioCrearEntrada(RepositorioEntrada repositorioParqueo) {
 		this.repositorioParqueo = repositorioParqueo;
 	}
 	
-	public void ejecutar(Parqueo parqueo) {
+	public void ejecutar(Entrada parqueo) {
 		if (validadExistencia(parqueo)) { 
 			throw new ExcepcionDuplicidad(PARQUEO_YA_EXISTE);
 		}
@@ -33,11 +33,11 @@ public class ServicioCrearParqueo {
 		this.repositorioParqueo.deleteById(id);
 	}
 	
-	public List<Parqueo> listar(){
+	public List<Entrada> listar(){
 		return this.repositorioParqueo.findAll();
 	}
 	
-	private boolean validadExistencia(Parqueo parqueo) {
+	private boolean validadExistencia(Entrada parqueo) {
 		return this.repositorioParqueo.existsById(parqueo.getId());
 	}
 }

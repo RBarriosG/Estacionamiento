@@ -12,8 +12,7 @@ public final class ConversorVehiculo {
 	Vehiculo vehiculo = null;
 		
 		if (vehiculoEntity != null) {
-			vehiculo = new Vehiculo(vehiculoEntity.getId(),
-									vehiculoEntity.getPlaca(),
+			vehiculo = new Vehiculo(vehiculoEntity.getPlaca(),
 									vehiculoEntity.getTipo(),
 									vehiculoEntity.getCilindraje());
 		}

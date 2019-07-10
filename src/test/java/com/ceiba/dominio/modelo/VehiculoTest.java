@@ -10,6 +10,7 @@ import com.ceiba.testdatabuilder.VehiculoTestDataBuilder;
 public class VehiculoTest {
 
 	private static final String TIPO_VEHICULO_INVALIDO = "Tipo vehiculo invalido";
+	private static final int CILINDRAJE_VALOR_0 = 0;
 
 	@Test
 	public void validarPlacaObligatoriaTest() {
@@ -44,10 +45,11 @@ public class VehiculoTest {
 	}
 
 	@Test
-	public void validarCilindrajeObligatorioTest() {
+	public void validarCilindrajeObligatorioMotoTest() {
 		// Arrenge
 		VehiculoTestDataBuilder vehiculoTestDataBuilder = new VehiculoTestDataBuilder();
-		vehiculoTestDataBuilder.conCilindraje(0);
+		vehiculoTestDataBuilder.conCilindraje(CILINDRAJE_VALOR_0);
+		vehiculoTestDataBuilder.conTipo(ValidadorArgumento.MOTO);
 
 		// Act
 		try {
@@ -55,7 +57,7 @@ public class VehiculoTest {
 			fail();
 		} catch (Exception e) {
 			// assert
-			assertEquals(Vehiculo.CILINDRAJE_CON_VALOR_0, e.getMessage());
+			assertEquals(Vehiculo.VEHICULO_TIPO_MOTO_NECESITA_CILINDRAJE, e.getMessage());
 		}
 	}
 

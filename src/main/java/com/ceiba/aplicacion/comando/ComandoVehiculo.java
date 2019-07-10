@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ComandoVehiculo {
-
-	private Long id;
 	
 	private String placa;
 	
