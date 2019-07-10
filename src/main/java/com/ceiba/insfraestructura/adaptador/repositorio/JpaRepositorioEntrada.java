@@ -7,5 +7,7 @@ import com.ceiba.insfraestructura.entity.EntradaEntity;
 
 @Repository
 public interface JpaRepositorioEntrada extends JpaRepository<EntradaEntity, Long>{
-
+	
+	boolean existsByPlaca(String placa);
+	
 }

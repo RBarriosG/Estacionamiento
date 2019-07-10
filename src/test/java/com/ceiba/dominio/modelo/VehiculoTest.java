@@ -5,6 +5,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+import com.ceiba.dominio.util.Constantes;
 import com.ceiba.testdatabuilder.VehiculoTestDataBuilder;
 
 public class VehiculoTest {
@@ -24,7 +25,7 @@ public class VehiculoTest {
 			fail();
 		} catch (Exception e) {
 			// assert
-			assertEquals(Vehiculo.PLACA_SIN_VALOR, e.getMessage());
+			assertEquals(Constantes.PLACA_SIN_VALOR, e.getMessage());
 		}
 	}
 
@@ -40,7 +41,7 @@ public class VehiculoTest {
 			fail();
 		} catch (Exception e) {
 			// assert
-			assertEquals(Vehiculo.TIPO_SIN_VALOR, e.getMessage());
+			assertEquals(Constantes.TIPO_SIN_VALOR, e.getMessage());
 		}
 	}
 
@@ -57,7 +58,7 @@ public class VehiculoTest {
 			fail();
 		} catch (Exception e) {
 			// assert
-			assertEquals(Vehiculo.VEHICULO_TIPO_MOTO_NECESITA_CILINDRAJE, e.getMessage());
+			assertEquals(Constantes.VEHICULO_TIPO_MOTO_NECESITA_CILINDRAJE, e.getMessage());
 		}
 	}
 
@@ -93,7 +94,7 @@ public class VehiculoTest {
 			fail();
 		} catch (Exception e) {
 			// assert
-			assertEquals(Vehiculo.TIPO_VEHICULO_NO_EXISTE , e.getMessage());
+			assertEquals(Constantes.TIPO_VEHICULO_NO_EXISTE , e.getMessage());
 		}
 	}
 }

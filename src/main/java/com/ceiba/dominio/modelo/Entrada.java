@@ -10,9 +10,6 @@ public class Entrada {
 
 	private Date fechaEntrada;
 
-	public Entrada() {
-	}
-
 	public Entrada(Long id, Vehiculo vehiculo, Date fechaEntrada) {
 		super();
 		this.id = id;
