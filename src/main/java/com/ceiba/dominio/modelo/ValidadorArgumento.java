@@ -8,6 +8,9 @@ public class ValidadorArgumento {
 	public static final String CARRO = "CARRO";
 	public static final String MOTO = "MOTO";
 	
+	private ValidadorArgumento() {
+	}
+	
 	public static void validarObligatorio(Object valor, String mensaje) {
 		if (valor == null) {
 			throw new ExcepcionValorObligatorio(mensaje);

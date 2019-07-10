@@ -21,7 +21,7 @@ public class VehiculoTest {
 
 		// Act
 		try {
-			Vehiculo vehiculo = vehiculoTestDataBuilder.build();
+			vehiculoTestDataBuilder.build();
 			fail();
 		} catch (ExcepcionValorObligatorio e) {
 			// assert
@@ -37,7 +37,7 @@ public class VehiculoTest {
 
 		// Act
 		try {
-			Vehiculo vehiculo = vehiculoTestDataBuilder.build();
+			vehiculoTestDataBuilder.build();
 			fail();
 		} catch (ExcepcionValorObligatorio e) {
 			// assert
@@ -53,7 +53,7 @@ public class VehiculoTest {
 
 		// Act
 		try {
-			Vehiculo vehiculo = vehiculoTestDataBuilder.build();
+			vehiculoTestDataBuilder.build();
 			fail();
 		} catch (ExcepcionValorObligatorio e) {
 			// assert
@@ -89,7 +89,7 @@ public class VehiculoTest {
 		vehiculoTestDataBuilder.conTipo(TIPO_VEHICULO_INVALIDO);
 		// Act
 		try {
-			Vehiculo vehiculo = vehiculoTestDataBuilder.build();
+			vehiculoTestDataBuilder.build();
 			fail();
 		} catch (ExcepcionTipoCarro e) {
 			// assert

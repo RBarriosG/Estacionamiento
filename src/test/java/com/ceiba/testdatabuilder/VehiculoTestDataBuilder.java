@@ -4,10 +4,10 @@ import com.ceiba.dominio.modelo.Vehiculo;
 
 public class VehiculoTestDataBuilder {
 
-	private static final Long ID = 100L;
-	private static final String PLACA = "EDC345";
-	private static final String TIPO = "CARRO";
-	private static final int CILINDRAJE = 1000;
+	private static final Long ID_V = 100L;
+	private static final String PLACA_V = "EDC345";
+	private static final String TIPO_V = "CARRO";
+	private static final int CILINDRAJE_V = 1000;
 	
 	private Long id;
 	private String placa;
@@ -15,15 +15,10 @@ public class VehiculoTestDataBuilder {
 	private int cilindraje;
 	
 	public VehiculoTestDataBuilder() {
-		this.id = ID;
-		this.placa = PLACA;
-		this.tipo = TIPO;
-		this.cilindraje = CILINDRAJE;
-	}
-	
-	public VehiculoTestDataBuilder conId(Long id) {
-		this.id = id;
-		return this;
+		this.id = ID_V;
+		this.placa = PLACA_V;
+		this.tipo = TIPO_V;
+		this.cilindraje = CILINDRAJE_V;
 	}
 	
 	public VehiculoTestDataBuilder conPlaca(String placa) {
