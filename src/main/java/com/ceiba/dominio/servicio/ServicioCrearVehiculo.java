@@ -8,7 +8,7 @@ import com.ceiba.dominio.puerto.repositorio.RepositorioVehiculo;
 
 public class ServicioCrearVehiculo {
 
-	private static final String VEHICULO_YA_EXISTE = "Vehiculo ya existe";
+	public static final String VEHICULO_YA_EXISTE = "Vehiculo ya existe";
 	
 	private RepositorioVehiculo repositorioVehiculo;
 	
@@ -23,15 +23,18 @@ public class ServicioCrearVehiculo {
 		this.repositorioVehiculo.save(vehiculo);
 	}
 	
-	public void eliminar(String placa) {
-		this.repositorioVehiculo.deleteByPlaca(placa);
+	private boolean validarExistencia(Vehiculo vehiculo) {
+		return this.repositorioVehiculo.existsByPlaca(vehiculo.getPlaca());
 	}
+	
+	/**
+	 * pendientes por eliminar
+	 * @param placa
+	 */
 	
 	public List<Vehiculo> listar(){
 		return this.repositorioVehiculo.findAll();
 	}
 	
-	private boolean validarExistencia(Vehiculo vehiculo) {
-		return this.repositorioVehiculo.existsByPlaca(vehiculo.getPlaca());
-	}
+	
 }
