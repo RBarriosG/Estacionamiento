@@ -11,9 +11,10 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
+@Getter
 @Entity(name = "Parqueo")
 @NoArgsConstructor
 @Data
@@ -44,25 +45,5 @@ public class ParqueoEntity {
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.valor = valor;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public VehiculoEntity getVehiculo() {
-		return vehiculo;
-	}
-
-	public Date getFechaInicio() {
-		return fechaInicio;
-	}
-
-	public Date getFechaFin() {
-		return fechaFin;
-	}
-
-	public double getValor() {
-		return valor;
 	}
 }

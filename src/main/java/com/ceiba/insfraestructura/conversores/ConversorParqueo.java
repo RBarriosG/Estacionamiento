@@ -3,7 +3,7 @@ package com.ceiba.insfraestructura.conversores;
 import com.ceiba.dominio.modelo.Parqueo;
 import com.ceiba.insfraestructura.entity.ParqueoEntity;
 
-public class ConversorParqueo {
+public final class ConversorParqueo {
 
 	private ConversorParqueo() {}	
 

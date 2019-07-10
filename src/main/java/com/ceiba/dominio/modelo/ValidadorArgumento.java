@@ -3,7 +3,7 @@ package com.ceiba.dominio.modelo;
 import com.ceiba.dominio.excepcion.ExcepcionTipoCarro;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 
-public class ValidadorArgumento {
+public final class ValidadorArgumento {
 
 	public static final String CARRO = "CARRO";
 	public static final String MOTO = "MOTO";

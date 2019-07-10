@@ -3,7 +3,7 @@ package com.ceiba.insfraestructura.conversores;
 import com.ceiba.dominio.modelo.Vehiculo;
 import com.ceiba.insfraestructura.entity.VehiculoEntity;
 
-public class ConversorVehiculo {
+public final class ConversorVehiculo {
 
 	private ConversorVehiculo() {}
 	

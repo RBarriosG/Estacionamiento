@@ -1,6 +1,6 @@
 package com.ceiba.dominio.util;
 
-public class ConstantesPrecios {
+public final class ConstantesPrecios {
 
 	private ConstantesPrecios() {
 	}

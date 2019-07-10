@@ -5,8 +5,6 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-import com.ceiba.dominio.excepcion.ExcepcionTipoCarro;
-import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 import com.ceiba.testdatabuilder.VehiculoTestDataBuilder;
 
 public class VehiculoTest {
@@ -23,7 +21,7 @@ public class VehiculoTest {
 		try {
 			vehiculoTestDataBuilder.build();
 			fail();
-		} catch (ExcepcionValorObligatorio e) {
+		} catch (Exception e) {
 			// assert
 			assertEquals(Vehiculo.PLACA_SIN_VALOR, e.getMessage());
 		}
@@ -39,7 +37,7 @@ public class VehiculoTest {
 		try {
 			vehiculoTestDataBuilder.build();
 			fail();
-		} catch (ExcepcionValorObligatorio e) {
+		} catch (Exception e) {
 			// assert
 			assertEquals(Vehiculo.TIPO_SIN_VALOR, e.getMessage());
 		}
@@ -55,7 +53,7 @@ public class VehiculoTest {
 		try {
 			vehiculoTestDataBuilder.build();
 			fail();
-		} catch (ExcepcionValorObligatorio e) {
+		} catch (Exception e) {
 			// assert
 			assertEquals(Vehiculo.CILINDRAJE_CON_VALOR_0, e.getMessage());
 		}
@@ -91,7 +89,7 @@ public class VehiculoTest {
 		try {
 			vehiculoTestDataBuilder.build();
 			fail();
-		} catch (ExcepcionTipoCarro e) {
+		} catch (Exception e) {
 			// assert
 			assertEquals(Vehiculo.TIPO_VEHICULO_NO_EXISTE , e.getMessage());
 		}

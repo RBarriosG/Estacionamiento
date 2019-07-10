@@ -7,8 +7,10 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @Entity(name = "Vehiculo")
 @NoArgsConstructor
 @Data
@@ -32,22 +34,6 @@ public class VehiculoEntity {
 		this.placa = placa;
 		this.tipo = tipo;
 		this.cilindraje = cilindraje;
-	}
-	
-	public Long getId() {
-		return id;
-	}
-	
-	public String getPlaca() {
-		return placa;
-	}
-	
-	public String getTipo() {
-		return tipo;
-	}
-	
-	public int getCilindraje() {
-		return cilindraje;
 	}
 	
 	
