@@ -33,7 +33,7 @@ pipeline {
                          submoduleCfg: [],
                          userRemoteConfigs: [[credentialsId:'GitHub_RBarriosG',
                          url:'https://github.com/RBarriosG/Estacionamiento']]])
-                sh 'gradle --b clean'
+                sh 'gradle clean'
             }  
         }
         stage('Unit Tests') {
