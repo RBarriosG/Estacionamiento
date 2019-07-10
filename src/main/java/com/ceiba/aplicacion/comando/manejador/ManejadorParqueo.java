@@ -5,21 +5,21 @@ import org.springframework.stereotype.Component;
 
 import com.ceiba.aplicacion.comando.ComandoParqueo;
 import com.ceiba.dominio.modelo.Parqueo;
-import com.ceiba.dominio.servicio.ServicioParqueo;
+import com.ceiba.dominio.servicio.ServicioCrearParqueo;
 
 @Component
 public class ManejadorParqueo {
 
-	private final ServicioParqueo servicioParqueo;
+	private final ServicioCrearParqueo servicioParqueo;
 	
 	@Autowired
-	public ManejadorParqueo(ServicioParqueo servicioParqueo) {
+	public ManejadorParqueo(ServicioCrearParqueo servicioParqueo) {
 		this.servicioParqueo = servicioParqueo;
 	}
 	
 	public void ejecutarGuardado(ComandoParqueo comandoParqueo) {
 		this.servicioParqueo
-			.guardar(new Parqueo(comandoParqueo.getId(),
+			.ejecutar(new Parqueo(comandoParqueo.getId(),
 								comandoParqueo.getVehiculo(),
 								comandoParqueo.getFechaInicio(),
 								comandoParqueo.getFechaFin(),

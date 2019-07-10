@@ -3,7 +3,7 @@ package com.ceiba.insfraestructura.adaptador.servicio;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.ceiba.dominio.servicio.ServicioParqueo;
+import com.ceiba.dominio.servicio.ServicioCrearParqueo;
 import com.ceiba.insfraestructura.adaptador.repositorio.JpaRepositorioParqueo;
 import com.ceiba.insfraestructura.adaptador.repositorio.JpaRepositorioParqueoImp;
 
@@ -11,8 +11,8 @@ import com.ceiba.insfraestructura.adaptador.repositorio.JpaRepositorioParqueoImp
 public class BeanServicioParqueo {
 
 	@Bean
-	public ServicioParqueo servicioParqueo(JpaRepositorioParqueo jpaRepositortioParqueo) {
-		return new ServicioParqueo(new JpaRepositorioParqueoImp(jpaRepositortioParqueo));
+	public ServicioCrearParqueo servicioParqueo(JpaRepositorioParqueo jpaRepositortioParqueo) {
+		return new ServicioCrearParqueo(new JpaRepositorioParqueoImp(jpaRepositortioParqueo));
 	}
 	
 }

@@ -12,7 +12,7 @@ import com.ceiba.testdatabuilder.VehiculoTestDataBuilder;
 public class ServicioCrearVehiculoTest {
 
 	@Test
-	public void validarExistenciaTest() {
+	public void validarExistenciaVehiculoTest() {
 		//arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().build();
 		RepositorioVehiculo repositorioVehiculo = Mockito.mock(RepositorioVehiculo.class);
