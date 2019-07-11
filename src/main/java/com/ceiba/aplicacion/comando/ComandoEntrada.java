@@ -1,6 +1,6 @@
 package com.ceiba.aplicacion.comando;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.ceiba.dominio.modelo.Vehiculo;
 
@@ -17,6 +17,6 @@ public class ComandoEntrada {
 
 	private Vehiculo vehiculo;
 
-	private Date fechaEntrada;
+	private LocalDateTime fechaEntrada;
 
 }

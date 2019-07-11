@@ -1,5 +1,6 @@
 package com.ceiba.dominio.servicio;
 
+import java.time.DayOfWeek;
 
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.dominio.excepcion.ExcepcionGuardarVehiculo;
@@ -91,9 +92,9 @@ public class ServicioCrearEntrada {
 	 * @return
 	 */
 	public boolean placaComienzaConLetraAYNoEsDomingoOLunes(Entrada entrada) {
-		if (entrada.getVehiculo().getPlaca().equals(Constantes.LETRA_INICIAL_PLACA_A))
-			if (entrada.getFechaInicio().getDay() != Constantes.DOMINGO
-					|| entrada.getFechaInicio().getDay() != Constantes.LUNES)
+		if (entrada.getVehiculo().getPlaca().startsWith(Constantes.LETRA_INICIAL_PLACA_A))
+			if (entrada.getFechaInicio().getDayOfWeek() != DayOfWeek.SUNDAY
+					|| entrada.getFechaInicio().getDayOfWeek() != DayOfWeek.MONDAY)
 				return true;
 
 		return false;

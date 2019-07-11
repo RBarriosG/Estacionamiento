@@ -1,6 +1,6 @@
 package com.ceiba.insfraestructura.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,9 +29,9 @@ public class EntradaEntity {
 	private VehiculoEntity vehiculo;
 
 	@NotNull
-	private Date fechaEntrada;
+	private LocalDateTime fechaEntrada;
 
-	public EntradaEntity(VehiculoEntity vehiculo, @NotNull Date fechaEntrada) {
+	public EntradaEntity(VehiculoEntity vehiculo, @NotNull LocalDateTime fechaEntrada) {
 		super();
 		this.vehiculo = vehiculo;
 		this.fechaEntrada = fechaEntrada;

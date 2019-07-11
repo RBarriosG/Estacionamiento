@@ -2,7 +2,7 @@ package com.ceiba.dominio.servicio;
 
 import static org.junit.Assert.*;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -16,9 +16,9 @@ import com.ceiba.dominio.util.Constantes;
 
 public class ServicioCrearEntradaTest {
 
-	private static final Date FECHA_DOMINGO = new Date(2019,7,7,06,10);
-	private static final Date FECHA_LUNES = new Date(2019,7,8);
-	private static final Date FECHA_MARTES = new Date(2019,7,9);
+	private static final LocalDateTime FECHA_DOMINGO = LocalDateTime.of(2019,7,7,0,0);
+	private static final LocalDateTime FECHA_LUNES = LocalDateTime.of(2019,7,8,0,0);
+	private static final LocalDateTime FECHA_MARTES= LocalDateTime.of(2019,7,9,0,0);
 	
 	private static final String PLACA_COMIENZA_CON_A = "ABC456";
 	
@@ -94,13 +94,13 @@ public class ServicioCrearEntradaTest {
 		}
 
 	}
-/*
+
 	@Test
-	public void placaComienzaConAYEsDomingoTest() {
+	public void placaComienzaConAYNoEsDomingoOLunesTest() {
 		// arrange
 		Vehiculo vehiculo = new VehiculoTestDataBuilder().conPlaca(PLACA_COMIENZA_CON_A).build();
 		Entrada entrada = new EntradaTestDataBuilder()
-				.conFechaEntrada(FECHA_DOMINGO)
+				.conFechaEntrada(FECHA_MARTES)
 				.conVechiculo(vehiculo).build();
 		RepositorioEntrada repositorioEntrada = Mockito.mock(RepositorioEntrada.class);
 		ServicioCrearEntrada servicioCrearEntrada = new ServicioCrearEntrada(repositorioEntrada);
@@ -115,6 +115,53 @@ public class ServicioCrearEntradaTest {
 		}
 
 	}
-	*/
+	/*
+	@Test
+	public void placaComienzaConAYEsDomingoTest() {
+		// arrange
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conPlaca(PLACA_COMIENZA_CON_A).build();
+		Entrada entrada = new EntradaTestDataBuilder()
+				.conFechaEntrada(FECHA_DOMINGO)
+				.conVechiculo(vehiculo).build();
+		RepositorioEntrada repositorioEntrada = Mockito.mock(RepositorioEntrada.class);
+		ServicioCrearEntrada servicioCrearEntrada = new ServicioCrearEntrada(repositorioEntrada);
+		// Act
+		boolean result = servicioCrearEntrada.placaComienzaConLetraAYNoEsDomingoOLunes(entrada);
+		// assert
+		assertFalse(result);
+
+	}
+	
+	@Test
+	public void placaComienzaConAYEsLunesTest() {
+		// arrange
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conPlaca(PLACA_COMIENZA_CON_A).build();
+		Entrada entrada = new EntradaTestDataBuilder()
+				.conFechaEntrada(FECHA_LUNES)
+				.conVechiculo(vehiculo).build();
+		RepositorioEntrada repositorioEntrada = Mockito.mock(RepositorioEntrada.class);
+		ServicioCrearEntrada servicioCrearEntrada = new ServicioCrearEntrada(repositorioEntrada);
+		// Act
+		boolean result = servicioCrearEntrada.placaComienzaConLetraAYNoEsDomingoOLunes(entrada);
+		// assert
+		assertFalse(result);
+
+	}
+	
+	@Test
+	public void placaComienzaConAYNoEsDomingoOLunesTest2() {
+		// arrange
+		Vehiculo vehiculo = new VehiculoTestDataBuilder().conPlaca(PLACA_COMIENZA_CON_A).build();
+		Entrada entrada = new EntradaTestDataBuilder()
+				.conFechaEntrada(FECHA_MARTES)
+				.conVechiculo(vehiculo).build();
+		RepositorioEntrada repositorioEntrada = Mockito.mock(RepositorioEntrada.class);
+		ServicioCrearEntrada servicioCrearEntrada = new ServicioCrearEntrada(repositorioEntrada);
+		// Act
+		boolean result = servicioCrearEntrada.placaComienzaConLetraAYNoEsDomingoOLunes(entrada);
+		// assert
+		assertTrue(result);
+
+	}*/
 	
 }

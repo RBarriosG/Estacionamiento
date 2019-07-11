@@ -1,6 +1,6 @@
 package com.ceiba.dominio.modelo;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Salida {
 
@@ -13,11 +13,11 @@ public class Salida {
 	
 	private Entrada entrada;
 
-	private Date fechaSalida;
+	private LocalDateTime fechaSalida;
 
 	private double valor;
 
-	public Salida(Long id, Entrada entrada, Date fechaSalida, double valor) {
+	public Salida(Long id, Entrada entrada, LocalDateTime fechaSalida, double valor) {
 		ValidadorArgumento.validarObligatorio(id, ID_NULO);
 		ValidadorArgumento.validarObligatorio(entrada, ENTRADA_NULA);
 		ValidadorArgumento.validarObligatorio(fechaSalida, FECHA_SALIDA_NULA);
@@ -36,7 +36,7 @@ public class Salida {
 		return entrada;
 	}
 
-	public Date getFechaSalida() {
+	public LocalDateTime getFechaSalida() {
 		return fechaSalida;
 	}
 

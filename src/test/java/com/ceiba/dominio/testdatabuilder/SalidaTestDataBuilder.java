@@ -1,6 +1,6 @@
 package com.ceiba.dominio.testdatabuilder;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.ceiba.dominio.modelo.Entrada;
 import com.ceiba.dominio.modelo.Salida;
@@ -12,7 +12,7 @@ public class SalidaTestDataBuilder {
  */
 	private static final Long ID = 16L;
 	private static final Entrada ENTRADA = new EntradaTestDataBuilder().build();
-	private static final Date FECHA_SALIDA = new Date(2019, 07, 10, 16, 05); // 2019-07-10 16:05
+	private static final LocalDateTime FECHA_SALIDA = LocalDateTime.of(2019,7,10,18,14);; // 2019-07-10 18:14
 	//Como supera las 9 hora se cobra a valor día. es un valor quemado que tenemos que resolver
 	private static final double VALOR = Constantes.VALOR_DIA_CARRO; 
 	
@@ -20,7 +20,7 @@ public class SalidaTestDataBuilder {
 	
 	private Entrada entrada;
 
-	private Date fechaSalida;
+	private LocalDateTime fechaSalida;
 
 	private double valor;
 	
@@ -41,7 +41,7 @@ public class SalidaTestDataBuilder {
 		return this;
 	}
 	
-	public SalidaTestDataBuilder conFechaSalida(Date fechaSalida) {
+	public SalidaTestDataBuilder conFechaSalida(LocalDateTime fechaSalida) {
 		this.fechaSalida = fechaSalida;
 		return this;
 	}

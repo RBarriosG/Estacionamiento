@@ -1,6 +1,6 @@
 package com.ceiba.dominio.modelo;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Entrada {
 
@@ -8,9 +8,9 @@ public class Entrada {
 
 	private Vehiculo vehiculo;
 
-	private Date fechaEntrada;
+	private LocalDateTime fechaEntrada;
 
-	public Entrada(Long id, Vehiculo vehiculo, Date fechaEntrada) {
+	public Entrada(Long id, Vehiculo vehiculo, LocalDateTime fechaEntrada) {
 		super();
 		this.id = id;
 		this.vehiculo = vehiculo;
@@ -21,7 +21,7 @@ public class Entrada {
 		return vehiculo;
 	}
 
-	public Date getFechaInicio() {
+	public LocalDateTime getFechaInicio() {
 		return fechaEntrada;
 	}
 
