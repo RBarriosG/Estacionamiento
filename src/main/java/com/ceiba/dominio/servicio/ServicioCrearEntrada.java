@@ -33,7 +33,7 @@ public class ServicioCrearEntrada {
 	}
 
 	private boolean validadExistencia(Entrada entrada) {
-		return this.repositorioEntrada.existsByPlaca(entrada.getVehiculo().getPlaca());
+		return this.repositorioEntrada.existsByVehiculo(entrada.getVehiculo());
 	}
 
 	private boolean maximo20Carros(Entrada entrada) {

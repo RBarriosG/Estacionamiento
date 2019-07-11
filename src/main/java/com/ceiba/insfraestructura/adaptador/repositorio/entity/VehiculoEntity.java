@@ -27,7 +27,6 @@ public class VehiculoEntity {
 	private int cilindraje;
 
 	public VehiculoEntity(@NotNull String placa, @NotNull String tipo, @NotNull int cilindraje) {
-		super();
 		this.placa = placa;
 		this.tipo = tipo;
 		this.cilindraje = cilindraje;

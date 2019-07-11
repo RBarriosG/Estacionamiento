@@ -11,7 +11,7 @@ import com.ceiba.insfraestructura.adaptador.repositorio.JpaRepositorioEntradaImp
 public class BeanServicioEntrada {
 
 	@Bean
-	public ServicioCrearEntrada servicioParqueo(JpaRepositorioEntrada jpaRepositortioParqueo) {
+	public ServicioCrearEntrada servicioEntrada(JpaRepositorioEntrada jpaRepositortioParqueo) {
 		return new ServicioCrearEntrada(new JpaRepositorioEntradaImp(jpaRepositortioParqueo));
 	}
 	

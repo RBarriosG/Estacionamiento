@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ceiba.dominio.modelo.Entrada;
+import com.ceiba.dominio.modelo.Vehiculo;
 import com.ceiba.dominio.puerto.repositorio.RepositorioEntrada;
 import com.ceiba.insfraestructura.adaptador.repositorio.conversores.ConversorEntrada;
 import com.ceiba.insfraestructura.adaptador.repositorio.entity.EntradaEntity;
@@ -46,11 +47,6 @@ public class JpaRepositorioEntradaImp implements RepositorioEntrada {
 	}
 
 	@Override
-	public boolean existsByPlaca(String placa) {
-		return jpaRepositortioEntrada.existsByPlaca(placa);
-	}
-
-	@Override
 	public Long count() {
 		return jpaRepositortioEntrada.count();
 	}
@@ -58,6 +54,11 @@ public class JpaRepositorioEntradaImp implements RepositorioEntrada {
 	@Override
 	public Long countByVehiculoTipoVehiculo(String tipoVehiculo) {
 		return jpaRepositortioEntrada.countByVehiculoTipoVehiculo(tipoVehiculo);
+	}
+
+	@Override
+	public boolean existsByVehiculo(Vehiculo vehiculo) {
+		return this.jpaRepositortioEntrada.existsByVehiculo(vehiculo);
 	}
 
 

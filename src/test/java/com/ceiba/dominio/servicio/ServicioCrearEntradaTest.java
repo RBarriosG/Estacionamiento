@@ -28,7 +28,7 @@ public class ServicioCrearEntradaTest {
 		// arrange
 		Entrada entrada = new EntradaTestDataBuilder().build();
 		RepositorioEntrada repositorioEntrada = Mockito.mock(RepositorioEntrada.class);
-		Mockito.when(repositorioEntrada.existsByPlaca(Mockito.any())).thenReturn(true);
+		Mockito.when(repositorioEntrada.existsByVehiculo(Mockito.any())).thenReturn(true);
 		ServicioCrearEntrada servicioCrearEntrada = new ServicioCrearEntrada(repositorioEntrada);
 		// Act
 		try {

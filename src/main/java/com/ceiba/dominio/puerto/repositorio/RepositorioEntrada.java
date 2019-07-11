@@ -3,10 +3,11 @@ package com.ceiba.dominio.puerto.repositorio;
 import java.util.List;
 
 import com.ceiba.dominio.modelo.Entrada;
+import com.ceiba.dominio.modelo.Vehiculo;
 
 public interface RepositorioEntrada {
 
-	boolean existsByPlaca(String placa);
+	boolean existsByVehiculo(Vehiculo vehiculo);
 	
 	void deleteById(Long id);
 	

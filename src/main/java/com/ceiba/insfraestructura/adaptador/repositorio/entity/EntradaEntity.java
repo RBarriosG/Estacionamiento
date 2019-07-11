@@ -32,7 +32,6 @@ public class EntradaEntity {
 	private LocalDateTime fechaEntrada;
 
 	public EntradaEntity(VehiculoEntity vehiculo, @NotNull LocalDateTime fechaEntrada) {
-		super();
 		this.vehiculo = vehiculo;
 		this.fechaEntrada = fechaEntrada;
 	}
