@@ -17,5 +17,6 @@ public class ServicioCrearSalida {
 		
 		this.repositorioSalida.save(salida);
 	}
+
 	
 }

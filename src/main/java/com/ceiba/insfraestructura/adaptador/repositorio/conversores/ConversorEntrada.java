@@ -1,7 +1,7 @@
-package com.ceiba.insfraestructura.conversores;
+package com.ceiba.insfraestructura.adaptador.repositorio.conversores;
 
 import com.ceiba.dominio.modelo.Entrada;
-import com.ceiba.insfraestructura.entity.EntradaEntity;
+import com.ceiba.insfraestructura.adaptador.repositorio.entity.EntradaEntity;
 
 public final class ConversorEntrada {
 

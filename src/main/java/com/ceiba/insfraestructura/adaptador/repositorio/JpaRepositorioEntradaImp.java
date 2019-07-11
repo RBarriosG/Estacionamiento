@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import com.ceiba.dominio.modelo.Entrada;
 import com.ceiba.dominio.puerto.repositorio.RepositorioEntrada;
-import com.ceiba.insfraestructura.conversores.ConversorEntrada;
-import com.ceiba.insfraestructura.entity.EntradaEntity;
+import com.ceiba.insfraestructura.adaptador.repositorio.conversores.ConversorEntrada;
+import com.ceiba.insfraestructura.adaptador.repositorio.entity.EntradaEntity;
 
 @Repository
 public class JpaRepositorioEntradaImp implements RepositorioEntrada {

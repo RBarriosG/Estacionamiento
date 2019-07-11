@@ -1,4 +1,4 @@
-package com.ceiba.insfraestructura.entity;
+package com.ceiba.insfraestructura.adaptador.repositorio.entity;
 
 import java.time.LocalDateTime;
 

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import com.ceiba.dominio.modelo.Vehiculo;
 import com.ceiba.dominio.puerto.repositorio.RepositorioVehiculo;
-import com.ceiba.insfraestructura.conversores.ConversorVehiculo;
-import com.ceiba.insfraestructura.entity.VehiculoEntity;
+import com.ceiba.insfraestructura.adaptador.repositorio.conversores.ConversorVehiculo;
+import com.ceiba.insfraestructura.adaptador.repositorio.entity.VehiculoEntity;
 
 @Repository
 public class JpaRepositorioVehiculoImp implements RepositorioVehiculo {

@@ -1,7 +1,7 @@
-package com.ceiba.insfraestructura.conversores;
+package com.ceiba.insfraestructura.adaptador.repositorio.conversores;
 
 import com.ceiba.dominio.modelo.Vehiculo;
-import com.ceiba.insfraestructura.entity.VehiculoEntity;
+import com.ceiba.insfraestructura.adaptador.repositorio.entity.VehiculoEntity;
 
 public final class ConversorVehiculo {
 

@@ -1,4 +1,4 @@
-package com.ceiba.insfraestructura.entity;
+package com.ceiba.insfraestructura.adaptador.repositorio.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -26,11 +26,6 @@ public class EntradaTestDataBuilder {
 		this.fechaEntrada = FECHA_ENTRADA;
 	}
 	
-	public EntradaTestDataBuilder conId(Long id) {
-		this.id = id;
-		return this;
-	}
-	
 	public EntradaTestDataBuilder conVechiculo(Vehiculo vehiculo) {
 		this.vehiculo = vehiculo;
 		return this;
