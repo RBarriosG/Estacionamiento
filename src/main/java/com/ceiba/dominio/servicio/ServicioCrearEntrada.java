@@ -26,28 +26,16 @@ public class ServicioCrearEntrada {
 			throw new ExcepcionGuardarVehiculo(Constantes.MAXIMO_NUMERO_DE_CARROS_EN_EL_PARQUEADERO);
 		if (maximo10Motos(entrada))
 			throw new ExcepcionGuardarVehiculo(Constantes.MAXIMO_NUMERO_DE_MOTOS_EN_EL_PARQUEADERO);
-		if (placaComienzaConLetraAYNoEsDomingoOLunes(entrada))
+		if (placaComienzaConLetraAYEsDiaHabil(entrada))
 			throw new ExcepcionGuardarVehiculo(Constantes.NO_PUEDE_INGRESAR_PORQUE_NO_ESTA_EN_UN_DIA_HABIL);
 
 		this.repositorioEntrada.save(entrada);
 	}
 
-	/**
-	 * Si existe una entrada con la misma placa no deja ingresar el vehiculo
-	 * 
-	 * @param entrada
-	 * @return
-	 */
 	private boolean validadExistencia(Entrada entrada) {
 		return this.repositorioEntrada.existsByPlaca(entrada.getVehiculo().getPlaca());
 	}
 
-	/**
-	 * El parqueadero solo puede tener 20 carros
-	 * 
-	 * @param entrada
-	 * @return
-	 */
 	private boolean maximo20Carros(Entrada entrada) {
 		if (entrada.getVehiculo().getTipo().equals(Constantes.CARRO)
 				&& repositorioEntrada.countByVehiculoTipoVehiculo(entrada.getVehiculo().getTipo()) >= 20)
@@ -56,12 +44,6 @@ public class ServicioCrearEntrada {
 		return false;
 	}
 
-	/**
-	 * El parqueadero solo puede tener 10 motos
-	 * 
-	 * @param entrada
-	 * @return
-	 */
 	private boolean maximo10Motos(Entrada entrada) {
 		if (entrada.getVehiculo().getTipo().equals(Constantes.MOTO)
 				&& repositorioEntrada.countByVehiculoTipoVehiculo(entrada.getVehiculo().getTipo()) >= 10)
@@ -70,12 +52,6 @@ public class ServicioCrearEntrada {
 		return false;
 	}
 
-	/**
-	 * El parqueadero solo puede tener 20 carros y 10 motos simultáneamente Es decir
-	 * un maximo de 30 vehiculos
-	 * 
-	 * @return
-	 */
 	private boolean maximo30Vehiculos() {
 		if (repositorioEntrada.count() >= 30)
 			return true;
@@ -83,20 +59,17 @@ public class ServicioCrearEntrada {
 		return false;
 	}
 
-	/**
-	 * Las placas que inician por la letra "A" solo pueden ingresar al parqueadero
-	 * los días lunes y domingos, de lo contrario debe mostrar un mensaje que no
-	 * puede ingresar porque no está en un dia hábil
-	 * 
-	 * @param entrada
-	 * @return
-	 */
-	public boolean placaComienzaConLetraAYNoEsDomingoOLunes(Entrada entrada) {
-		if (entrada.getVehiculo().getPlaca().startsWith(Constantes.LETRA_INICIAL_PLACA_A))
-			if (entrada.getFechaInicio().getDayOfWeek() != DayOfWeek.SUNDAY
-					|| entrada.getFechaInicio().getDayOfWeek() != DayOfWeek.MONDAY)
-				return true;
+	public boolean placaComienzaConLetraAYEsDiaHabil(Entrada entrada) {
+		if (!(entrada.getVehiculo().getPlaca().startsWith(Constantes.LETRA_INICIAL_PLACA_A) && esDiaHabil(entrada)))
+			return true;
 
+		return false;
+	}
+
+	private boolean esDiaHabil(Entrada entrada) {
+		if (entrada.getFechaInicio().getDayOfWeek() == DayOfWeek.SUNDAY
+				|| entrada.getFechaInicio().getDayOfWeek() == DayOfWeek.MONDAY)
+			return true;
 		return false;
 	}
 

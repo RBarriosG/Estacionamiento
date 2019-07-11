@@ -33,7 +33,4 @@ public final class Constantes {
 	public static final String VEHICULO_TIPO_MOTO_NECESITA_CILINDRAJE = "Vehiculo tipo moto necesita cilindraje";
 	public static final String TIPO_VEHICULO_NO_EXISTE = "Tipo vehiculo no existe";
 
-	public static final int DOMINGO = 0;
-	public static final int LUNES = 1;
-
 }
