@@ -5,8 +5,8 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+import com.ceiba.dominio.testdatabuilder.VehiculoTestDataBuilder;
 import com.ceiba.dominio.util.Constantes;
-import com.ceiba.testdatabuilder.VehiculoTestDataBuilder;
 
 public class VehiculoTest {
 

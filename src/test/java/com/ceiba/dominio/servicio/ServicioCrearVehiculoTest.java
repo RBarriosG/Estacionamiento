@@ -7,7 +7,7 @@ import org.mockito.Mockito;
 
 import com.ceiba.dominio.modelo.Vehiculo;
 import com.ceiba.dominio.puerto.repositorio.RepositorioVehiculo;
-import com.ceiba.testdatabuilder.VehiculoTestDataBuilder;
+import com.ceiba.dominio.testdatabuilder.VehiculoTestDataBuilder;
 
 public class ServicioCrearVehiculoTest {
 

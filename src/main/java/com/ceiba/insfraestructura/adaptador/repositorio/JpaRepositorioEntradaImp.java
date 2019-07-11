@@ -55,4 +55,10 @@ public class JpaRepositorioEntradaImp implements RepositorioEntrada {
 		return jpaRepositortioEntrada.count();
 	}
 
+	@Override
+	public Long countByVehiculoTipoVehiculo(String tipoVehiculo) {
+		return jpaRepositortioEntrada.countByVehiculoTipoVehiculo(tipoVehiculo);
+	}
+
+
 }

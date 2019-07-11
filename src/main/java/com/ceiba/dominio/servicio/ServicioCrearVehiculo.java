@@ -28,8 +28,8 @@ public class ServicioCrearVehiculo {
 	}
 	
 	/**
-	 * pendientes por eliminar
-	 * @param placa
+	 * Pendiente por eliminar
+	 * @return
 	 */
 	
 	public List<Vehiculo> listar(){

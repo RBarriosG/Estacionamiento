@@ -1,10 +1,10 @@
 package com.ceiba.dominio.excepcion;
 
-public class ExcepcionTipoCarro extends RuntimeException {
+public class ExcepcionTipoVehiculo extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
-	public ExcepcionTipoCarro(String mensaje) {
+	public ExcepcionTipoVehiculo(String mensaje) {
 		super(mensaje);
 	}
 }

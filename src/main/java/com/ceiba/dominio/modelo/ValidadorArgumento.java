@@ -1,6 +1,6 @@
 package com.ceiba.dominio.modelo;
 
-import com.ceiba.dominio.excepcion.ExcepcionTipoCarro;
+import com.ceiba.dominio.excepcion.ExcepcionTipoVehiculo;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 
 public final class ValidadorArgumento {
@@ -23,7 +23,7 @@ public final class ValidadorArgumento {
 	
 	public static void validarTipoVehiculo(Object valor, String mensaje) {
 		if (!(valor.toString().equals(CARRO) || valor.toString().equals(MOTO)))
-			throw new ExcepcionTipoCarro(mensaje);
+			throw new ExcepcionTipoVehiculo(mensaje);
 	}
 	
 	public static void validarObligatorioValor(double valor, String mensaje) {

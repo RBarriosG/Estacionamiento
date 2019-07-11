@@ -10,4 +10,6 @@ public interface JpaRepositorioEntrada extends JpaRepository<EntradaEntity, Long
 	
 	boolean existsByPlaca(String placa);
 	
+	Long countByVehiculoTipoVehiculo(String tipoVehiculo);
+	
 }

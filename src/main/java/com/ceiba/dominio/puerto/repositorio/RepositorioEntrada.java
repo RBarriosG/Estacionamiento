@@ -16,4 +16,6 @@ public interface RepositorioEntrada {
 	
 	Long count();
 	
+	Long countByVehiculoTipoVehiculo(String tipoVehiculo);
+	
 }

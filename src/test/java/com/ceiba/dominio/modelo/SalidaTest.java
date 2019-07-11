@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.ceiba.testdatabuilder.SalidaTestDataBuilder;
+import com.ceiba.dominio.testdatabuilder.SalidaTestDataBuilder;
 
 
 public class SalidaTest {

@@ -1,4 +1,4 @@
-package com.ceiba.testdatabuilder;
+package com.ceiba.dominio.testdatabuilder;
 
 import com.ceiba.dominio.modelo.Vehiculo;
 
